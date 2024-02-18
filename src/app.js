@@ -1,15 +1,13 @@
 const express=require("express")
 const productManager=require('./productManager')
-
 const path = require('path');
-const jsonFilePath = path.resolve(__dirname, 'productos.json');
 
 
 const PORT=8080
 const app=express()
 
 
-const pm = new productManager(jsonFilePath);
+const pm = new productManager(path.join(__dirname, "productos.json"));
 
 app.get("/", async(req, res)=>{
     res.send("Server básico express ccorriendo...")
@@ -24,15 +22,11 @@ app.get("/productos", async (req, res) => {
       if (skip && skip > 0) {
         resultado = resultado.slice(skip);
       }
-if (isNaN(skip)){
-    return res.send("Por favor ingrese un valor numérico")
-}      
+      
       if (limit && limit > 0) {
         resultado = resultado.slice(0, limit);
       }
-      if (isNaN(limit)){
-        return res.send("Por favor ingrese un valor numérico")
-    }     
+        
       res.json(resultado);
     } catch (error) {
       console.error(error);
