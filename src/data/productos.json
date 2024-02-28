@@ -1,0 +1,240 @@
+[
+     {
+          "id": 1,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc123",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 2,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc124",
+          "status": false,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 3,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc125",
+          "status": false,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 4,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc126",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 5,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc127",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 6,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc128",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 7,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc129",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 8,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc130",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 9,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc131",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 10,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc132",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 11,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc133",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 12,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc134",
+          "status": false,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 13,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc135",
+          "status": false,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 14,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc136",
+          "status": false,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 15,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc137",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 16,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc138",
+          "status": false,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 17,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc139",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 18,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "thumbnail": "img1",
+          "code": "abc140",
+          "status": false,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 19,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "code": "abc141",
+          "status": false,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 20,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "code": "abc142",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 21,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "code": "abc143",
+          "status": true,
+          "stock": 20,
+          "category": "zapatillas"
+     },
+     {
+          "id": 22,
+          "title": "adidas",
+          "description": "zapas blancas",
+          "price": 120000,
+          "code": "abc144",
+          "status": false,
+          "stock": 20,
+          "category": "zapatillas"
+     }
+]

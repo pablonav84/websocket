@@ -1,0 +1,22 @@
+[
+     {
+          "id": 1,
+          "product": "abc123",
+          "quantity": 3
+     },
+     {
+          "id": 2,
+          "product": "abc124",
+          "quantity": 5
+     },
+     {
+          "id": 3,
+          "product": "abc125",
+          "quantity": 9
+     },
+     {
+          "id": 4,
+          "product": "abc126",
+          "quantity": 1
+     }
+]
