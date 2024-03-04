@@ -1,12 +1,12 @@
-const ProductsManager = require("../managers/ProductManager");
+const CartManager = require("../managers/cartManager");
 const { join } = require("path");
-const fs=require("fs")
+const fs=require("fs");
 
 const Router = require('express').Router;
 const router = Router();
 
-let rutaproducts = join(__dirname, "..", "data", "cart.json");
-const productsManager = new ProductsManager(rutaproducts);
+let rutaCart = join(__dirname, "..", "data", "cart.json");
+const cartManager = new CartManager(rutaCart)
 
 router.get("/", (req, res) => {
 
@@ -33,9 +33,9 @@ router.get("/", (req, res) => {
   });
 
   router.post('/', (req, res) => {
-    const { products } = req.body;
+    //const { products } = req.body;
   
-  let cartProduct = productsManager.addProduct({ products });
+  let cartProduct = cartManager.addProduct();
   res.setHeader('Content-Type', 'application/json');
   res.status(201).json({
       cartProduct
