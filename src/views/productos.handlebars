@@ -1,0 +1,18 @@
+<h2>Productos Page</h2>
+<hr>
+<h3>Lista de Productos:</h3>
+<ul>
+    {{#each products}}
+  <li>Categoría:{{category}}
+  	<ul>
+    <li>Marca: {{title}}</li>
+  	<li>Descripción: {{description}}</li>
+  	<li>Precio: {{price}}</li>
+  	</ul>
+  </li>
+  {{/each}}
+</ul>
+
+<input type="button" value="Inicio" onclick="document.location.href='/'" />
+
+<script src="js/productos.js"></script>

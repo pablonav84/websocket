@@ -1,0 +1,19 @@
+<h2>Home Page</h2>
+<hr>
+
+
+<script> 
+  var nombre = prompt("Ingresa tu nombre");
+
+  if (nombre) {
+    document.write("<h2>¡Hola " + nombre + " Bienvenido!</h2>");
+  } else {
+    document.write("<h2>¡Bienvenido!</h2>");
+  }
+</script>
+
+<input type="button" value="Productos" onclick="document.location.href='/productos'" />
+<br>
+<input type="button" value="Productos (JSON)" onclick="document.location.href='/api/products'" />
+<br>
+<input type="button" value="Productos con Socket" onclick="document.location.href='/realTimeProducts'" />
