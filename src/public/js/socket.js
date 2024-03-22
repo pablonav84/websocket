@@ -50,4 +50,14 @@ socket.on("nuevoProducto", datos => {
       ulProductos.appendChild(li);
     });
   });
-  
+
+  const compra=async(idCart, descrip)=>{
+    let idProduct=document.getElementById("idProduct").innerHTML
+    console.log({idCart, descrip, idProduct})
+    let respuesta=await fetch(idCart+"/"+"http://localhost:3000/product/"+descrip, 
+    {
+        method:"post"
+    })
+    let datos=await respuesta.json()
+    console.log(datos)
+}

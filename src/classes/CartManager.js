@@ -2,46 +2,40 @@ import fs from "fs"
 
 export class CartManager{
     constructor(ruta){
-        this.ruta=ruta
+        this.path=ruta
     }
-        getProducts(ruta){
-            if(fs.existsSync(this.ruta)){
-                return JSON.parse(fs.readFileSync(this.ruta, {encoding:'utf-8'}))
-            }else{
-                return []
-            }
-}
-
-saveDatos(ruta, datos){
-    fs.writeFileSync(ruta, JSON.stringify(datos, null, 5))
-}
-  
-    addProduct() {
-
-        let products = this.getProducts();
-    
-        let id = 1;
-        if (products.length > 0) {
-            // Filtrar los productos con valores de ID nulos o indefinidos
-            let filteredProducts = products.filter(p => p.id !== null && p.id !== undefined);
-            id = Math.max(...filteredProducts.map(d => d.id)) + 1;
+    get() {
+        if (fs.existsSync(this.path)) {
+          const data = fs.readFileSync(this.path, { encoding: 'utf-8' });
+            return JSON.parse(data);
+        } else {
+          return [];
         }
-    
-        let nuevoProducto = {
-            id,
-            products:[{}],
-        };
-    
-        products.push(nuevoProducto);
-        this.saveDatos(this.ruta, products);
-    
-        return nuevoProducto;
-    }
-
-    getProductById(id) {
-        let products = this.getProducts();
-        let foundProduct = products.find(product => product.id === id);
-    
-        return foundProduct;
       }
+      
+      create(cart) {
+        let carts = this.get();
+      
+        let id = 1;
+        if (carts.length > 0) {
+          id = Math.max(...carts.map(d => d.id)) + 1;
+        }
+      
+        let cartNuevo = {
+          id, ...cart
+        };
+      
+        carts.push(cartNuevo);
+        if (cartNuevo) {
+          fs.writeFile(this.path, JSON.stringify(carts, null, 5), (err) => {
+            if (err) {
+              console.error(err);
+            }
+          });
+        } else {
+          console.log("error");
+          return null;
+        }
+        return cartNuevo;
+      }      
 }

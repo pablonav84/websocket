@@ -1,26 +1,26 @@
 [
      {
           "id": 1,
-          "products": [
-               {}
-          ]
+          "descrip": "zapas"
      },
      {
           "id": 2,
-          "products": [
-               {}
-          ]
+          "descrip": "zapas"
      },
      {
           "id": 3,
-          "products": [
-               {}
-          ]
+          "descrip": "zapas"
      },
      {
           "id": 4,
-          "products": [
-               {}
-          ]
+          "descrip": "zapas"
+     },
+     {
+          "id": 5,
+          "descrip": "zapas"
+     },
+     {
+          "id": 6,
+          "descrip": "zapas"
      }
 ]

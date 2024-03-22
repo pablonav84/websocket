@@ -40,6 +40,14 @@ router.post('/', (req, res) => {
   });
 });
 
+router.post('/:cid/product/:pid', (req, res) => {
+
+  console.log(req.params)
+
+  res.setHeader('Content-Type', 'application/json');
+  res.status(201).json({mensaje:"inscripcion correcta!"});
+});
+
 router.delete("/", (req, res) => {
   const productId = parseInt(req.body.id);
   const deletedProduct = productsManager.deleteProduct(productId);
@@ -56,3 +64,4 @@ router.delete("/", (req, res) => {
     });
   }
 });
+
