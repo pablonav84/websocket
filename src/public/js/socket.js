@@ -51,6 +51,13 @@ socket.on("nuevoProducto", datos => {
     });
   });
 
+  socket.on("nuevoCart", datos=>{
+    console.log(datos)
+    let ulCarts=document.getElementById("cart") 
+    ulCarts.innerHTML+=`<li>${datos.descrip} <button onclick="compra('${datos.id}','${datos.descrip}')">Comprar</button></li>`
+
+})
+
   const compra=async(idCart, descrip)=>{
     let idProduct=document.getElementById("idProduct").innerHTML
     console.log({idCart, descrip, idProduct})

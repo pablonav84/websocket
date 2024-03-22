@@ -10,10 +10,22 @@
   } else {
     document.write("<h2>¡Bienvenido!</h2>");
   }
+
 </script>
+
+<h2>Productos:</h2>
+<ul>
+    {{#each productos}}
+        <li>
+            <a href="/compra?idProduct={{id}}">{{title}}</a>
+        </li>
+    {{/each}}
+</ul>
+
 
 <input type="button" value="Productos" onclick="document.location.href='/productos'" />
 <br>
 <input type="button" value="Productos (JSON)" onclick="document.location.href='/api/products'" />
 <br>
 <input type="button" value="Productos con Socket" onclick="document.location.href='/realTimeProducts'" />
+<br>
