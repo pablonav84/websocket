@@ -58,25 +58,13 @@ socket.on("nuevoProducto", datos => {
 
 })
 
-  const compra=(idCart, descrip)=>{
+  const compra=async(idCart, descrip)=>{
     let idProduct=document.getElementById("idProduct").innerHTML
     console.log({idCart, descrip, idProduct})
-    let respuesta= fetch("http://localhost:8080/products/"+idCart+"/"+descrip, 
+    let respuesta=await fetch(idCart+"/"+"http://localhost:3000/product/"+descrip, 
     {
         method:"post"
     })
-    respuesta
-  .then(response => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error("Error en la solicitud fetch");
-    }
-  })
-  .then(datos => {
-    console.log(datos);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+    let datos=await respuesta.json()
+    console.log(datos)
 }

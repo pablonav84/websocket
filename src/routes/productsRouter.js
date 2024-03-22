@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
   });
 });
 
-router.post('/products/:id/:descrip', (req, res) => {
+router.post('/:cid/product/:pid', (req, res) => {
 
   console.log(req.params)
 
