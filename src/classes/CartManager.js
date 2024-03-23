@@ -1,9 +1,8 @@
 import fs from "fs"
-import { rutaCart } from "../utils.js";
 
 export class CartManager {
-    constructor() {
-        this.path = rutaCart;
+    constructor(ruta) {
+        this.path = ruta;
     }
 
     async getCarts(){
@@ -14,8 +13,8 @@ export class CartManager {
         }
 }
 
-saveDatos(rutaCart, datos){
-    fs.writeFileSync(rutaCart, JSON.stringify(datos, null, 5))
+saveDatos(ruta, datos){
+    fs.writeFileSync(ruta, JSON.stringify(datos, null, 5))
 }
 
 async getById(id){
@@ -41,7 +40,7 @@ async comprar(idCart, id, description){
     }
 
     compra.push(nuevoCart)
-    this.saveDatos(rutaCart, compra);
+    this.saveDatos(this.path, compra);
     console.log({cid, id, description})
     return nuevoCart
 }

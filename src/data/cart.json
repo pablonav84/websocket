@@ -26,27 +26,17 @@
      },
      {
           "cid": 6,
-          "id": "1",
-          "description": "zapas blancas"
+          "id": "12",
+          "description": "zapas negras"
      },
      {
           "cid": 7,
-          "id": "1",
-          "description": "zapas blancas"
+          "id": "11",
+          "description": "zapas negras"
      },
      {
           "cid": 8,
-          "id": "1",
-          "description": "zapas blancas"
-     },
-     {
-          "cid": 9,
-          "id": "8",
-          "description": "zapas blancas"
-     },
-     {
-          "cid": 10,
-          "id": "8",
-          "description": "zapas blancas"
+          "id": "10",
+          "description": "zapas negras"
      }
 ]
