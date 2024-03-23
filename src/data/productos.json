@@ -86,5 +86,49 @@
           "status": true,
           "stock": 20,
           "category": "zapatillas"
+     },
+     {
+          "id": 9,
+          "title": "jordan",
+          "description": "zapas negras",
+          "price": "145000",
+          "thumbnail": "img1",
+          "code": "alc678",
+          "status": true,
+          "stock": "10",
+          "category": "zapas"
+     },
+     {
+          "id": 10,
+          "title": "jordan",
+          "description": "zapas negras",
+          "price": "145000",
+          "thumbnail": "img1",
+          "code": "alc678",
+          "status": true,
+          "stock": "10",
+          "category": "zapas"
+     },
+     {
+          "id": 11,
+          "title": "jordan",
+          "description": "zapas negras",
+          "price": "145000",
+          "thumbnail": "img1",
+          "code": "alc678",
+          "status": true,
+          "stock": "10",
+          "category": "zapas"
+     },
+     {
+          "id": 12,
+          "title": "jordan",
+          "description": "zapas negras",
+          "price": "145000",
+          "thumbnail": "img1",
+          "code": "alc678",
+          "status": true,
+          "stock": "10",
+          "category": "zapas"
      }
 ]

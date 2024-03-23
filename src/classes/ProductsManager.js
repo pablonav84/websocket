@@ -17,9 +17,9 @@ saveDatos(ruta, datos){
     fs.writeFileSync(ruta, JSON.stringify(datos, null, 5))
 }
 
-addProduct(product) {
+async addProduct(product) {
 
-    let products = this.getProducts();
+    let products = await this.getProducts();
 
     let id = 1;
     if (products.length > 0) {
@@ -28,7 +28,7 @@ addProduct(product) {
         id = Math.max(...filteredProducts.map(d => d.id)) + 1;
     }
 
-    let nuevoProducto = {
+    let nuevoProducto = await {
         id,
         ...product
     };

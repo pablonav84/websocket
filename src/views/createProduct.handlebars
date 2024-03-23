@@ -1,7 +1,6 @@
 <h2>Crear Nuevo Producto</h2>
 <hr>
 
-
 <form action="/api/products" method="post">
 <input type="text" name="title" placeholder="Ingrese Título">
 <br>
@@ -22,8 +21,13 @@
 <br>
 <input type="text" name="category" placeholder="Ingrese Categoría">
 <br>
-<input type="submit" value="Crear Producto" onclick="document.location.href='/api/products/'">
-
+<input type="submit" value="Crear Producto">
 </form>
 
-<input type="button" value="Volver" onclick="document.location.href='/realTimeProducts'" />
+<button onclick="goBack()">Volver</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
