@@ -1,41 +1,48 @@
 import fs from "fs"
+import { rutaCart } from "../utils.js";
 
-export class CartManager{
-    constructor(ruta){
-        this.path=ruta
+export class CartManager {
+    constructor() {
+        this.path = rutaCart;
     }
-    get() {
-        if (fs.existsSync(this.path)) {
-          const data = fs.readFileSync(this.path, { encoding: 'utf-8' });
-            return JSON.parse(data);
-        } else {
-          return [];
+
+    async getCarts(){
+        if(fs.existsSync(this.path)){
+            return JSON.parse(await fs.promises.readFile(this.path, {encoding:'utf-8'}))
+        }else{
+            return []
         }
-      }
-      
-      create(cart) {
-        let carts = this.get();
-      
-        let id = 1;
-        if (carts.length > 0) {
-          id = Math.max(...carts.map(d => d.id)) + 1;
-        }
-      
-        let cartNuevo = {
-          id, ...cart
-        };
-      
-        carts.push(cartNuevo);
-        if (cartNuevo) {
-          fs.writeFile(this.path, JSON.stringify(carts, null, 5), (err) => {
-            if (err) {
-              console.error(err);
-            }
-          });
-        } else {
-          console.log("error");
-          return null;
-        }
-        return cartNuevo;
-      }      
+}
+
+saveDatos(rutaCart, datos){
+    fs.writeFileSync(rutaCart, JSON.stringify(datos, null, 5))
+}
+
+async getById(id){
+    let carts=await this.getCarts()
+    return carts.find(crt=>crt.id===id)
+}
+
+async comprar(idCart, id, description){
+    let compra = await this.getCarts()
+    
+    let cid = 1;
+    if (compra.length > 0) {
+        // Obtener el valor máximo actual de cid en el carrito
+        let maxCid = Math.max(...compra.map(p => p.cid));
+        // Asignar un nuevo valor único para cid
+        cid = maxCid + 1;
+    }
+
+    let nuevoCart = {
+        cid,
+        id,
+        description        
+    }
+
+    compra.push(nuevoCart)
+    this.saveDatos(rutaCart, compra);
+    console.log({cid, id, description})
+    return nuevoCart
+}
 }

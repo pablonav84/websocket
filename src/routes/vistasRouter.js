@@ -1,28 +1,43 @@
 import { Router } from 'express';
 import { ProductsManager } from '../classes/ProductsManager.js';
-import { rutaProducts } from '../utils.js';
-
-
+import { rutaCart, rutaProducts } from '../utils.js';
+import { CartManager } from '../classes/CartManager.js';
 export const router=Router()
 
 let productsManager=new ProductsManager(rutaProducts)
+let cartManager=new CartManager(rutaCart)
 
-router.get('/', (req, res)=>{
-  res.status(200).render("inicio")
+router.get('/', async (req, res)=>{
+  let cart=await cartManager.getCarts()
+    res.status(200).render("inicio", {cart})
 })
 
-router.get('/realTimeProducts', (req, res)=>{
+router.get('/carts', async (req, res)=>{
+  let cart=await cartManager.getCarts()
+    res.status(200).render("carts", {cart})
+})
 
-  let products=productsManager.getProducts()
-  res.status(200).render("realTimeProducts", {products})
+router.get('/realTimeProducts', async (req, res)=>{
+  let {cid}=req.query
+  if(!cid){
+      res.setHeader('Content-Type','application/json');
+      return res.status(400).json({error:`No se recibieron datos...!!!`})
+  }
+  cid=Number(cid)
+  if(isNaN(cid)){
+      res.setHeader('Content-Type','application/json');
+      return res.status(400).json({error:`idCart formato incorrecto`})
+  }
+  let products=await productsManager.getProducts()
+  let cart=await cartManager.getById(cid)
+    res.status(200).render("realTimeProducts", {products, cart})
 })
 
 router.get('/createProduct', (req, res)=>{
-
   res.status(200).render("createProduct")
 })
 
-router.get('/productos', (req, res)=>{
-  let products=productsManager.getProducts()
+router.get('/productos', async (req, res)=>{
+  let products= await productsManager.getProducts()
   res.status(200).render("productos", {products})
 })

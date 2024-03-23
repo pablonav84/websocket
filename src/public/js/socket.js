@@ -5,7 +5,7 @@ socket.on("saludo", (datos)=>{
 })
   
 socket.on("nuevoProducto", datos => {
-    console.log(datos);
+    
     let ulProductos = document.getElementById("productos");
     ulProductos.innerHTML +=
       `<li>Categoría: ${datos.category}
@@ -19,9 +19,19 @@ socket.on("nuevoProducto", datos => {
        </li>`;
   });
   
-  const comprar=(id, description)=>{
-    console.log({id, description})
-  }
+  const comprar= async(id, description)=>{
+    
+    let cid= document.getElementById("idCart").innerHTML
+    console.log({cid, id, description})
+    
+    let respuesta=await fetch("http://localhost:8080/productos/"+id+"/"+description,
+    {
+        method:"post"
+    })
+    let datos=await respuesta.json()
+    socket.emit("compra", idCart, id, description)
+    console.log(datos)
+    }
 
   socket.on("productoEliminado", datos => {
     console.log(datos);
@@ -50,3 +60,4 @@ socket.on("nuevoProducto", datos => {
       ulProductos.appendChild(li);
     });
   });
+  

@@ -1,0 +1,12 @@
+<h2>Lista de Carts</h2>
+
+<ul>
+    {{#each cart}}
+        <li>
+            <a href="/realTimeProducts?cid={{cid}}">id:{{cid}}-detalle:{{description}}</a>
+        </li>
+    {{/each}}
+</ul>
+
+<input type="button" value="Volver Al Inicio" onclick="document.location.href='/'" />
+<br>

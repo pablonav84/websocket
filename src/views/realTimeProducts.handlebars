@@ -1,5 +1,18 @@
-<h2>Productos Con WebSocket</h2>
+<script>
+
+var nombreGuardado = sessionStorage.getItem('nombre');
+
+if (nombreGuardado) {
+    document.write("<h2>¡Hola " + nombreGuardado + " Bienvenido A La Sección Compras!</h2>");
+  } else {
+    document.write("<h2>¡Bienvenido A La Sección Compras!</h2>");
+  }
+
+</script>
+
+<h2>Los Detalles De Su Compra Son: {{cart.description}} - Compra N°: <span id="idCart">{{cart.cid}}</span></h2>
 <hr>
+
 <h3>Lista de Productos:</h3>
 <ul id="productos">
     {{#each products}}
@@ -9,7 +22,7 @@
     <li>Marca: {{title}}</li>
   	<li>Descripción: {{description}}</li>
   	<li>Precio: {{price}}</li>
-    <button onclick="comprar('{{id}}','{{description}}')">Comprar</button>
+    <button onclick="comprar('{{id}}', '{{description}}')">Comprar</button>
   	</ul>
   </li>
   {{/each}}
@@ -18,7 +31,6 @@
 <input type="button" value="Inicio" onclick="document.location.href='/'" />
 <br>
 <input type="button" value="Agregar Producto" onclick="document.location.href='/createProduct'" />
-
 
 <script src="socket.io/socket.io.js"></script>
 <script src="js/socket.js"></script>

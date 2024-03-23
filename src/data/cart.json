@@ -1,26 +1,52 @@
 [
      {
-          "id": 1,
-          "descrip": "zapas"
+          "cid": 1,
+          "id": "1",
+          "description": "zapas blancas"
      },
      {
-          "id": 2,
-          "descrip": "zapas"
+          "cid": 2,
+          "id": "1",
+          "description": "zapas blancas"
      },
      {
-          "id": 3,
-          "descrip": "zapas"
+          "cid": 3,
+          "id": "2",
+          "description": "zapas blancas"
      },
      {
-          "id": 4,
-          "descrip": "zapas"
+          "cid": 4,
+          "id": "2",
+          "description": "zapas blancas"
      },
      {
-          "id": 5,
-          "descrip": "zapas"
+          "cid": 5,
+          "id": "1",
+          "description": "zapas blancas"
      },
      {
-          "id": 6,
-          "descrip": "zapas"
+          "cid": 6,
+          "id": "1",
+          "description": "zapas blancas"
+     },
+     {
+          "cid": 7,
+          "id": "1",
+          "description": "zapas blancas"
+     },
+     {
+          "cid": 8,
+          "id": "1",
+          "description": "zapas blancas"
+     },
+     {
+          "cid": 9,
+          "id": "8",
+          "description": "zapas blancas"
+     },
+     {
+          "cid": 10,
+          "id": "8",
+          "description": "zapas blancas"
      }
 ]

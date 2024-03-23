@@ -5,9 +5,9 @@ export class ProductsManager{
         this.path=ruta
     }
 
-    getProducts(){
+    async getProducts(){
         if(fs.existsSync(this.path)){
-            return JSON.parse(fs.readFileSync(this.path, {encoding:'utf-8'}))
+            return JSON.parse(await fs.promises.readFile(this.path, {encoding:'utf-8'}))
         }else{
             return []
         }
